@@ -1,60 +1,156 @@
-import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
+import { title } from "process";
+import CustomMenu from "../ui/CustomMenu";
 
 const aboutUs = [
   {
-    title: "Division",
+    title: "About Division",
     links: [
-      {
-        href: "/",
-        label: "History",
-      },
-      {
-        href: "/",
-        label: "Vision",
-      },
+      { href: "/", label: "History & Activities" },
+      { href: "/", label: "Vision & Mission" },
+      { href: "/", label: "Honorable Adviser" },
+      { href: "/", label: "List of Ex-Ministers" },
+      { href: "/", label: "Secretary" },
+      { href: "/", label: "List of Ex-Secretaries" },
+      { href: "/", label: "Organogram" },
+      { href: "/", label: "Allocation of Business" },
+      { href: "/", label: "Principal Function" },
+      { href: "/", label: "Work Distribution" },
+      { href: "/", label: "Member Nomination" },
     ],
   },
   {
     title: "Manpower",
     links: [
+      { href: "/", label: "Officers" },
+      { href: "/", label: "Work Distribution" },
+      { href: "/", label: "Information Officer" },
+      { href: "/", label: "GRS and Appellate Officer" },
+      { href: "/", label: "Focal Point Officers" },
+    ],
+  },
+  {
+    title: "Services of Divisions",
+    links: [
+      { href: "/", label: "Citizen Charter" },
+      { href: "/", label: "List of Citizen e-Services" },
+    ],
+  },
+  {
+    title: "Committees of Ministry/Division",
+    links: [
       {
         href: "/",
-        label: "History",
-      },
-      {
-        href: "/",
-        label: "Vision",
+        label:
+          "Committees chaired by Honorable PM & Honorable Minister Regarding Ministry/Division",
       },
     ],
   },
 ];
 
-export default function Navbar({ options }) {
+const institutions = [
+  { title: "", links: [{ href: "/", label: "List of Offices/Institutions" }] },
+];
+const galleryMenu = [
+  {
+    title: "",
+    links: [
+      { href: "/", label: "Photo Gallery" },
+      { href: "/", label: "Video Gallery" },
+    ],
+  },
+];
+const policyMenu = [
+  {
+    title: "",
+    links: [
+      { href: "/", label: "Acts" },
+      { href: "/", label: "Policy" },
+      { href: "/", label: "Guidelines and Strategies" },
+      { href: "/", label: "Draft Acts, Rules and Policy" },
+    ],
+  },
+];
+const servicesMenu = [
+  {
+    title: "",
+    links: [
+      { href: "/", label: "Casual Leave Management" },
+      { href: "/", label: "Smart Dashboard" },
+      { href: "/", label: "Get Your Freelancer ID" },
+      { href: "/", label: "Fellowship & Innovation Fund Application" },
+      { href: "/", label: "e-Nothi" },
+      { href: "/", label: "Web mail" },
+      { href: "/", label: "Online Salary Submission" },
+      { href: "/", label: "e-Tendering(e-GP)" },
+      { href: "/", label: "Mygov" },
+      { href: "/", label: "GRP" },
+      { href: "/", label: "Project Monitoring System" },
+      { href: "/", label: "Online ACR" },
+      { href: "/", label: "Online Recruitment" },
+      { href: "/", label: "EMPORIA" },
+    ],
+  },
+];
+
+const projectMenu = [
+  {
+    title: "Project",
+    links: [
+      { href: "/", label: "On going Projects" },
+      { href: "/", label: "Procurement Plan" },
+      { href: "/", label: "Completed Projects" },
+    ],
+  },
+  {
+    title: "Programme",
+    links: [{ href: "/", label: "Completed Programme" }],
+  },
+];
+const contactAndCommentMenu = [
+  {
+    title: "Contact",
+    links: [{ href: "/", label: "Office Address" }],
+  },
+  {
+    title: "Comment",
+    links: [{ href: "/", label: "Your Question & Comment" }],
+  },
+];
+
+const Navbar = () => {
   return (
-    <div className="">
-      <Menu __demoMode>
-        <MenuButton className="inline-flex items-center gap-2 rounded-md bg-gray-800 py-1.5 px-3 text-sm/6 font-semibold text-black shadow-inner shadow-white/10 focus:outline-none data-[hover]:bg-gray-700 data-[open]:bg-gray-700 data-[focus]:outline-1 data-[focus]:outline-white">
-          Options
-        </MenuButton>
-        <MenuItems className="flex">
-          {aboutUs?.map((items, index) => {
-            return (
-              <div key={index}>
-                <p>{items?.title}</p>
-                {items?.links?.map((links, index) => {
-                  return (
-                    <MenuItem key={index}>
-                      <button className="group flex w-full items-center gap-2 rounded-lg data-[focus]:bg-white/10">
-                        {links.label}
-                      </button>
-                    </MenuItem>
-                  );
-                })}
-              </div>
-            );
-          })}
-        </MenuItems>
-      </Menu>
+    <div className="w-full h-[70px] bg-gray-50 flex items-center justify-between px-[60px]">
+      <p className="font-bold text-xl">ICT Division</p>
+      <div>
+        <ul className="flex items-center gap-x-3">
+          <li>
+            <CustomMenu options={aboutUs} label="About us" />
+          </li>
+          <li>
+            <CustomMenu options={institutions} label="Institutions" />
+          </li>
+          <li>
+            <CustomMenu options={projectMenu} label="Projects" />
+          </li>
+          <li>
+            <CustomMenu options={galleryMenu} label="Gallery" />
+          </li>
+          <li>
+            <CustomMenu
+              options={contactAndCommentMenu}
+              label="Contact & Comment"
+            />
+          </li>
+          <li>
+            <CustomMenu options={policyMenu} label="Policy" />
+          </li>
+          <li>
+            <CustomMenu options={servicesMenu} label="e-Services" />
+          </li>
+        </ul>
+      </div>
     </div>
   );
-}
+};
+
+export default Navbar;
