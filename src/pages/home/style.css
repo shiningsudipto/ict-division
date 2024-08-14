@@ -1,0 +1,18 @@
+.banner {
+  /* background-image: url("../../assets/ict.jpg"); */
+  /* background-image: url("../../assets/ict2.jpg"); */
+  /* background-image: url("../../assets/ict3.jpg"); */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../assets/ict4.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  /* filter: blur(1px); */
+}
+.notices {
+  /* background-image: url("../../assets/logos/bd-govt.png"); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
