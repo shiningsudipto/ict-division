@@ -11,7 +11,7 @@ import CountUp from "react-countup";
 
 const Sidebar = () => {
   return (
-    <div className="w-[270px] space-y-5">
+    <div className="w-[260px] space-y-5 bg-primary-foreground/5 p-2 h-fit rounded-md">
       <p className="sidebar-section">Office attachment application form</p>
       <p className="sidebar-section">
         বার্ষিক কর্মসম্পাদন চুক্তি (এপিএ) ২০২০-২০২১ এর চূড়ান্ত মূল্যায়নে তথ্য ও
@@ -34,6 +34,9 @@ const Sidebar = () => {
             </div>
           );
         })}
+        <button className="border border-primary hover:bg-primary hover:text-white w-full text-secondary rounded-md py-1 font-medium">
+          All
+        </button>
       </div>
       <p className="sidebar-section">Important Link</p>
       <div className="space-y-2">
@@ -45,6 +48,9 @@ const Sidebar = () => {
             </div>
           );
         })}
+        <button className="border border-primary hover:bg-primary hover:text-white w-full text-secondary rounded-md py-1 font-medium">
+          All
+        </button>
       </div>
       <img src={s3} alt="" className="sidebar-image" />
       <img src={s4} alt="" className="sidebar-image" />

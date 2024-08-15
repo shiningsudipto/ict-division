@@ -11,9 +11,11 @@ const Home = () => {
   return (
     <div>
       <Banner />
-      <ImportantLinks />
-      <div className="px-[70px] flex justify-between">
-        <Card />
+      <div className="flex p-[70px] justify-between">
+        <div>
+          <ImportantLinks />
+          <Card />
+        </div>
         <Sidebar />
       </div>
       <Anthem />
