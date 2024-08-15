@@ -1,4 +1,3 @@
-import { title } from "process";
 import CustomMenu from "../ui/CustomMenu";
 
 const aboutUs = [

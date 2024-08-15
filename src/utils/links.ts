@@ -19,3 +19,49 @@ export const governmentOffices = [
   { label: "Primary Digital Content", href: "/" },
   { label: "National Portal", href: "/" },
 ];
+
+export const footerLinks = [
+  {
+    label: "Sitemap",
+    href: "/",
+  },
+  {
+    label: "Secrecy Policy",
+    href: "/",
+  },
+  {
+    label: "Contact",
+    href: "/",
+  },
+  {
+    label: "FAQ",
+    href: "/",
+  },
+  {
+    label: "Uses Policy",
+    href: "/",
+  },
+];
+
+export const planningAndImplementation = [
+  {
+    label: "Cabinet Division",
+    href: "/",
+  },
+  {
+    label: "a2i",
+    href: "/",
+  },
+  {
+    label: "BCC",
+    href: "/",
+  },
+  {
+    label: "DOICT",
+    href: "/",
+  },
+  {
+    label: "BASIS",
+    href: "/",
+  },
+];
