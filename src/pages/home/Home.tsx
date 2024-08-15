@@ -1,4 +1,4 @@
-import Card from "@/components/ui/Card";
+import Card from "@/components/shared/Card";
 import Banner from "./components/Banner";
 import ImportantLinks from "./components/ImportantLinks";
 import "./style.css";
@@ -6,6 +6,7 @@ import Sidebar from "./components/Sidebar";
 import Alert from "./components/Alert";
 import Leadership from "./components/Leadership";
 import Anthem from "./components/Anthem";
+import Emergency from "./components/Emergency";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
         </div>
         <Sidebar />
       </div>
+      <Emergency />
       <Anthem />
       <Alert />
       <Leadership />
