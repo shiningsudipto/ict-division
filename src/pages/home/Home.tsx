@@ -4,6 +4,7 @@ import ImportantLinks from "./components/ImportantLinks";
 import "./style.css";
 import Sidebar from "./components/Sidebar";
 import Alert from "./components/Alert";
+import Leadership from "./components/Leadership";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <Sidebar />
       </div>
       <Alert />
+      <Leadership />
     </div>
   );
 };
