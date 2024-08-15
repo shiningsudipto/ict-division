@@ -5,6 +5,7 @@ import "./style.css";
 import Sidebar from "./components/Sidebar";
 import Alert from "./components/Alert";
 import Leadership from "./components/Leadership";
+import Anthem from "./components/Anthem";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <Card />
         <Sidebar />
       </div>
+      <Anthem />
       <Alert />
       <Leadership />
     </div>
