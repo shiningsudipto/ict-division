@@ -67,3 +67,16 @@
     @apply bg-background text-foreground;
   }
 }
+
+.sidebar-section {
+  @apply bg-primary-foreground text-white px-2 py-3 rounded-md font-medium;
+}
+.sidebar-image {
+  @apply border rounded-md border-primary-foreground h-[50px] w-full object-cover;
+}
+.heading {
+  @apply text-3xl font-semibold;
+}
+.subHeading {
+  @apply text-xl font-medium mt-2;
+}

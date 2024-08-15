@@ -38,7 +38,7 @@ const ImportantLinks = () => {
     console.log(values);
   };
   return (
-    <div className="p-[70px] flex gap-x-[100px]">
+    <div className="p-[70px] flex gap-x-10">
       <div className="relative border rounded-md p-8">
         <h3 className="text-2xl font-medium">Notice Board</h3>
         <div className="notices">
