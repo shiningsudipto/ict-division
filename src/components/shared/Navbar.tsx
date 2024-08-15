@@ -119,7 +119,10 @@ const contactAndCommentMenu = [
 const Navbar = () => {
   return (
     <div className="w-full h-[70px] bg-gray-50 flex items-center justify-between px-[60px]">
-      <p className="font-bold text-xl">ICT Division</p>
+      <p className="font-bold text-2xl">
+        <span className="text-primary">ICT</span>{" "}
+        <span className="text-primary-foreground">Division</span>
+      </p>
       <div>
         <ul className="flex items-center gap-x-3">
           <li>
