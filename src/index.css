@@ -68,6 +68,11 @@
   }
 }
 
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .sidebar-section {
   @apply bg-primary-foreground text-white px-2 py-3 rounded-md font-medium;
 }
