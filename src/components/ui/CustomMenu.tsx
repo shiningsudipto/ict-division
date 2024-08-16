@@ -1,45 +1,62 @@
+import React from "react";
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { CustomMenuProps } from "@/types";
+import { Link } from "react-router-dom";
 
 const CustomMenu: React.FC<CustomMenuProps> = ({ options, label }) => {
   return (
     <NavigationMenu>
-      <NavigationMenuList className="">
+      <NavigationMenuList>
         <NavigationMenuItem>
           <NavigationMenuTrigger className="bg-transparent">
             {label}
           </NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className={`flex justify-between gap-x-3 p-2`}>
-              {options?.map((section) => (
-                <li key={section.title} className="w-[150px]">
-                  {section?.title && (
-                    <h3 className="text-sm font-semibold text-primary-foreground">
-                      {section.title}
-                    </h3>
-                  )}
-                  <ul className="mt-1 space-y-1">
-                    {section?.links?.map((link) => (
-                      <li key={link.label}>
-                        <NavigationMenuLink
-                          href={link.href}
-                          className="block py-1 text-sm text-secondary hover:text-primary"
-                        >
-                          {link.label}
-                        </NavigationMenuLink>
-                      </li>
+          <NavigationMenuContent className="p-2">
+            {options.map((menu, menuIndex) => (
+              <Accordion
+                key={menuIndex}
+                type="single"
+                collapsible
+                className="w-full"
+              >
+                <AccordionItem
+                  value={`item-${menuIndex}`}
+                  className="w-[180px] border-0"
+                >
+                  <AccordionTrigger className="h-[40px] max-h-[50px] p-1 rounded-md text-start hover:bg-primary-foreground hover:text-white">
+                    {menu.title || label}
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    {menu.links.map((subMenu, subMenuIndex) => (
+                      <div key={subMenuIndex} className="pl-4">
+                        <ul>
+                          <li>
+                            <Link
+                              to={subMenu.href}
+                              className="block py-1 hover:text-primary"
+                            >
+                              {subMenu.label}
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
                     ))}
-                  </ul>
-                </li>
-              ))}
-            </ul>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            ))}
           </NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>
