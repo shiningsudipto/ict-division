@@ -6,12 +6,22 @@ import { Link } from "react-router-dom";
 import { Form, Formik } from "formik";
 import Dropdown from "@/components/formik/Dropdown";
 
-const initialValues = {
+interface Option {
+  label: string;
+  value: string;
+}
+
+interface FormValues {
+  officeType: string;
+  officeSubType: string;
+}
+
+const initialValues: FormValues = {
   officeType: "dd",
   officeSubType: "dd",
 };
 
-const officeTypes = [
+const officeTypes: Option[] = [
   { label: "অফিসের ধরণ", value: "dd" },
   { label: "মন্ত্রণালয়/বিভাগ", value: "ministry" },
   { label: "অধিদপ্তর বাতায়ন", value: "directorate" },
@@ -21,7 +31,8 @@ const officeTypes = [
   { label: "ইউনিয়ন বাতায়ন", value: "unionBatayon" },
   { label: "অন্যান্য", value: "otherOfficeList" },
 ];
-const officeSubTypes = [
+
+const officeSubTypes: Option[] = [
   { label: "বিভাগ নির্বচন করুন", value: "dd" },
   { label: "চট্টগ্রাম বিভাগ", value: "www.chittagongdiv.gov.bd" },
   { label: "রাজশাহী বিভাগ", value: "www.rajshahidiv.gov.bd" },
@@ -34,7 +45,7 @@ const officeSubTypes = [
 ];
 
 const ImportantLinks = () => {
-  const handleSubmit = (values) => {
+  const handleSubmit = (values: FormValues) => {
     console.log(values);
   };
   return (
@@ -75,7 +86,7 @@ const ImportantLinks = () => {
         <div>
           <h3 className="text-2xl font-medium">Bangladesh National Portal</h3>
           <Formik onSubmit={handleSubmit} initialValues={initialValues}>
-            {({ values, setFieldValue }) => (
+            {({ setFieldValue }) => (
               <Form className="space-y-5 mt-5">
                 <Dropdown
                   setFieldValue={setFieldValue}
