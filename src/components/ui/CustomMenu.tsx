@@ -6,8 +6,9 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import { CustomMenuProps } from "@/types";
 
-const CustomMenu = ({ options, label }) => {
+const CustomMenu: React.FC<CustomMenuProps> = ({ options, label }) => {
   return (
     <NavigationMenu>
       <NavigationMenuList className="">
@@ -29,7 +30,7 @@ const CustomMenu = ({ options, label }) => {
                       <li key={link.label}>
                         <NavigationMenuLink
                           href={link.href}
-                          className="block py-1 text-sm text-gray-700 hover:text-gray-900"
+                          className="block py-1 text-sm text-secondary hover:text-primary"
                         >
                           {link.label}
                         </NavigationMenuLink>

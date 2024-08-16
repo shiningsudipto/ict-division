@@ -8,7 +8,6 @@ import {
 } from "@/components/ui/drawer";
 import { IoMenu } from "react-icons/io5";
 import { AiOutlineCloseSquare } from "react-icons/ai";
-import { FaCartPlus } from "react-icons/fa";
 import "./style.css";
 
 import {
