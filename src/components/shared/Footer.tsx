@@ -44,7 +44,7 @@ const getCurrentDateTime = (): string => {
 
 const Footer = () => {
   return (
-    <div className="footer p-[70px] text-secondary bg-primary-foreground/20">
+    <div className="footer p-[70px] text-secondary bg-primary-foreground/10">
       <div className="flex justify-between gap-x-[70px]">
         <div>
           <h4 className="font-semibold text-lg mb-4">Important links</h4>

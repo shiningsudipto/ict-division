@@ -76,7 +76,7 @@ const Emergency = () => {
           {emergencyItems.map((item, index) => (
             <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/5">
               <div className="p-1">
-                <Card className="border-0 h-[100px] flex items-center">
+                <Card className="border-0 h-[100px] flex items-center bg-transparent">
                   <CardContent className="flex aspect-square items-center justify-center p-6 border-0">
                     <img src={item.img} alt={item.label} />
                   </CardContent>

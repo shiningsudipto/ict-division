@@ -23,7 +23,7 @@ const Leadership = () => {
     },
   ];
   return (
-    <div className="p-[70px]">
+    <div className="p-[70px] bg-primary-foreground/20">
       <div className="text-center mb-10">
         <h2 className="heading">Leadership Spotlight</h2>
         <h3 className="subHeading">Meet Our Honorable Adviser and Secretary</h3>
@@ -33,7 +33,7 @@ const Leadership = () => {
           return (
             <div
               key={idx}
-              className="flex gap-x-5 w-full border rounded-md p-4"
+              className="flex gap-x-5 w-full border rounded-md p-4 bg-slate-50"
             >
               <div className="space-y-2 flex-1">
                 <img

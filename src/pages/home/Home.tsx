@@ -7,6 +7,7 @@ import Alert from "./components/Alert";
 import Leadership from "./components/Leadership";
 import Anthem from "./components/Anthem";
 import Emergency from "./components/Emergency";
+import Location from "./components/Location";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
       <Anthem />
       <Alert />
       <Leadership />
+      <Location />
     </div>
   );
 };

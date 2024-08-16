@@ -2,7 +2,7 @@ import anthemAudio from "@/assets/assets/bd_national_anthem.mp3";
 
 const Anthem = () => {
   return (
-    <div className="anthem flex justify-center flex-col items-center mt-[70px]">
+    <div className="anthem flex justify-center flex-col items-center">
       <div className="text-center mb-10 text-white">
         <h2 className="heading">National Anthem</h2>
         <h3 className="subHeading">
