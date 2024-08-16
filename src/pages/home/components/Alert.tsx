@@ -1,6 +1,6 @@
 const Alert = () => {
   return (
-    <div className="p-[70px]">
+    <div className="md:p-[70px] p-5">
       <div className="text-center mb-10">
         <h2 className="heading">Crisis Preparedness Hub</h2>
         <h3 className="subHeading">
@@ -8,9 +8,9 @@ const Alert = () => {
         </h3>
       </div>
       <div>
-        <div className="flex justify-between">
+        <div className="flex lg:flex-row flex-col justify-between">
           <iframe
-            width="560"
+            width="100%"
             height="315"
             src="https://www.youtube.com/embed/GT9ShGE_qjg?si=O0h2NAoREBA_9irP"
             title="YouTube video player"
@@ -20,7 +20,7 @@ const Alert = () => {
             allowFullScreen
           ></iframe>
           <iframe
-            width="560"
+            width="100%"
             height="315"
             src="https://www.youtube.com/embed/TYKx86gq2Pc?si=8V_-BWDrofguNZBp"
             title="YouTube video player"

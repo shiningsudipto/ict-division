@@ -13,17 +13,17 @@ const Home = () => {
   return (
     <div>
       <Banner />
-      <div className="flex lg:flex-row md:flex-col p-[70px] justify-between">
+      <div className="flex lg:flex-row flex-col md:p-[70px] p-5 justify-between gap-5">
         <div>
           <ImportantLinks />
-          <div className="md:hidden lg:block">
+          <div className="hidden lg:block">
             <Card />
           </div>
         </div>
-        <div className="md:hidden lg:block">
+        <div className="hidden lg:block">
           <Sidebar />
         </div>
-        <div className="flex justify-between lg:hidden">
+        <div className="flex md:flex-row flex-col md:justify-between lg:hidden">
           <Card />
           <Sidebar />
         </div>

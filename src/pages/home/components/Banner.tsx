@@ -1,15 +1,17 @@
 const Banner = () => {
   return (
-    <div className="banner flex items-center justify-center flex-col">
-      <h1 className="text-[64px] text-white font-bold">ICT Division</h1>
-      <h2 className="text-2xl font-semibold text-white">
+    <div className="banner p-5 md:h-[400px] h-[300px] flex items-center justify-center flex-col">
+      <h1 className="md:text-[64px] text-4xl text-white font-bold mb-4">
+        ICT Division
+      </h1>
+      <h2 className="text-2xl text-center font-semibold text-white">
         Government of the People's Republic of Bangladesh
       </h2>
       <div className="mt-5">
         <input
           type="text"
           placeholder="Query..."
-          className="h-[40px] w-[280px] px-4 py-1"
+          className="h-[40px] md:w-[280px] px-4 py-1"
         />
         <button
           type="submit"

@@ -44,11 +44,11 @@ const getCurrentDateTime = (): string => {
 
 const Footer = () => {
   return (
-    <div className="footer p-[70px] text-secondary bg-primary-foreground/10">
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-x-[100px] md:gap-5">
-        <div>
+    <div className="footer md:p-[70px] p-5 text-secondary bg-primary-foreground/10">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-x-[100px] gap-5">
+        <div className="md:block flex flex-col justify-center items-center">
           <h4 className="font-semibold text-lg mb-4">Important links</h4>
-          <div className="space-y-2">
+          <div className="space-y-2 md:text-start text-center">
             {footerLinks.map((item, index) => {
               return (
                 <div key={index}>
@@ -60,11 +60,11 @@ const Footer = () => {
             })}
           </div>
         </div>
-        <div>
+        <div className="md:block flex flex-col justify-center items-center">
           <h4 className="font-semibold text-lg mb-4">
             Planning and Implementation
           </h4>
-          <div className="space-y-2">
+          <div className="space-y-2 md:text-start text-center">
             {planningAndImplementation.map((item, index) => {
               return (
                 <div key={index}>
@@ -76,7 +76,7 @@ const Footer = () => {
             })}
           </div>
         </div>
-        <div>
+        <div className="md:block flex flex-col justify-center items-center">
           <h4 className="font-semibold text-lg mb-4">Technical Support</h4>
           <div className="space-x-2 flex items-baseline">
             {techSupports.map((item, index) => {
@@ -94,8 +94,8 @@ const Footer = () => {
             })}
           </div>
         </div>
-        <div className="flex justify-end">
-          <div>
+        <div className="flex md:justify-end">
+          <div className="md:block flex flex-col justify-center items-center w-full md:w-auto">
             <h4 className="font-semibold text-lg mb-4">Socials</h4>
             <div className="flex items-center gap-x-2 text-primary-foreground">
               <RiFacebookCircleLine className="text-[36px] cursor-pointer hover:text-primary" />{" "}
@@ -105,7 +105,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="text-center font-medium">
+      <p className="text-center font-medium md:pb-0 pb-5">
         Site was last updated: {getCurrentDateTime()}
       </p>
     </div>

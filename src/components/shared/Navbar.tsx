@@ -1,130 +1,250 @@
+import { Link } from "react-router-dom";
 import CustomMenu from "../ui/CustomMenu";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import { IoMenu } from "react-icons/io5";
+import { AiOutlineCloseSquare } from "react-icons/ai";
+import { FaCartPlus } from "react-icons/fa";
+import "./style.css";
 
-const aboutUs = [
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import {
+  aboutUs,
+  contactAndCommentMenu,
+  galleryMenu,
+  institutions,
+  policyMenu,
+  projectMenu,
+  servicesMenu,
+} from "@/utils/menuLinks";
+
+const menuLinks = [
   {
-    title: "About Division",
-    links: [
-      { href: "/", label: "History & Activities" },
-      { href: "/", label: "Vision & Mission" },
-      { href: "/", label: "Honorable Adviser" },
-      { href: "/", label: "List of Ex-Ministers" },
-      { href: "/", label: "Secretary" },
-      { href: "/", label: "List of Ex-Secretaries" },
-      { href: "/", label: "Organogram" },
-      { href: "/", label: "Allocation of Business" },
-      { href: "/", label: "Principal Function" },
-      { href: "/", label: "Work Distribution" },
-      { href: "/", label: "Member Nomination" },
-    ],
-  },
-  {
-    title: "Manpower",
-    links: [
-      { href: "/", label: "Officers" },
-      { href: "/", label: "Work Distribution" },
-      { href: "/", label: "Information Officer" },
-      { href: "/", label: "GRS and Appellate Officer" },
-      { href: "/", label: "Focal Point Officers" },
-    ],
-  },
-  {
-    title: "Services of Divisions",
-    links: [
-      { href: "/", label: "Citizen Charter" },
-      { href: "/", label: "List of Citizen e-Services" },
-    ],
-  },
-  {
-    title: "Committees of Ministry/Division",
-    links: [
+    title: "About us",
+    subMenus: [
       {
-        href: "/",
-        label:
-          "Committees chaired by Honorable PM & Honorable Minister Regarding Ministry/Division",
+        title: "About Division",
+        links: [
+          { href: "/", label: "History & Activities" },
+          { href: "/", label: "Vision & Mission" },
+          { href: "/", label: "Honorable Adviser" },
+          { href: "/", label: "List of Ex-Ministers" },
+          { href: "/", label: "Secretary" },
+          { href: "/", label: "List of Ex-Secretaries" },
+          { href: "/", label: "Organogram" },
+          { href: "/", label: "Allocation of Business" },
+          { href: "/", label: "Principal Function" },
+          { href: "/", label: "Work Distribution" },
+          { href: "/", label: "Member Nomination" },
+        ],
+      },
+      {
+        title: "Manpower",
+        links: [
+          { href: "/", label: "Officers" },
+          { href: "/", label: "Work Distribution" },
+          { href: "/", label: "Information Officer" },
+          { href: "/", label: "GRS and Appellate Officer" },
+          { href: "/", label: "Focal Point Officers" },
+        ],
+      },
+      {
+        title: "Services of Divisions",
+        links: [
+          { href: "/", label: "Citizen Charter" },
+          { href: "/", label: "List of Citizen e-Services" },
+        ],
+      },
+      {
+        title: "Committees of Ministry/Division",
+        links: [
+          {
+            href: "/",
+            label:
+              "Committees chaired by Honorable PM & Honorable Minister Regarding Ministry/Division",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Institutions",
+    subMenus: [
+      {
+        title: "",
+        links: [{ href: "/", label: "List of Offices/Institutions" }],
+      },
+    ],
+  },
+  {
+    title: "Gallery",
+    subMenus: [
+      {
+        title: "",
+        links: [
+          { href: "/", label: "Photo Gallery" },
+          { href: "/", label: "Video Gallery" },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Policy",
+    subMenus: [
+      {
+        title: "",
+        links: [
+          { href: "/", label: "Acts" },
+          { href: "/", label: "Policy" },
+          { href: "/", label: "Guidelines and Strategies" },
+          { href: "/", label: "Draft Acts, Rules and Policy" },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Services",
+    subMenus: [
+      {
+        title: "",
+        links: [
+          { href: "/", label: "Casual Leave Management" },
+          { href: "/", label: "Smart Dashboard" },
+          { href: "/", label: "Get Your Freelancer ID" },
+          { href: "/", label: "Fellowship & Innovation Fund Application" },
+          { href: "/", label: "e-Nothi" },
+          { href: "/", label: "Web mail" },
+          { href: "/", label: "Online Salary Submission" },
+          { href: "/", label: "e-Tendering(e-GP)" },
+          { href: "/", label: "Mygov" },
+          { href: "/", label: "GRP" },
+          { href: "/", label: "Project Monitoring System" },
+          { href: "/", label: "Online ACR" },
+          { href: "/", label: "Online Recruitment" },
+          { href: "/", label: "EMPORIA" },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Projects",
+    subMenus: [
+      {
+        title: "Project",
+        links: [
+          { href: "/", label: "On going Projects" },
+          { href: "/", label: "Procurement Plan" },
+          { href: "/", label: "Completed Projects" },
+        ],
+      },
+      {
+        title: "Programme",
+        links: [{ href: "/", label: "Completed Programme" }],
+      },
+    ],
+  },
+  {
+    title: "Contract & Comment",
+    subMenus: [
+      {
+        title: "Contact",
+        links: [{ href: "/", label: "Office Address" }],
+      },
+      {
+        title: "Comment",
+        links: [{ href: "/", label: "Your Question & Comment" }],
       },
     ],
   },
 ];
 
-const institutions = [
-  { title: "", links: [{ href: "/", label: "List of Offices/Institutions" }] },
-];
-const galleryMenu = [
-  {
-    title: "",
-    links: [
-      { href: "/", label: "Photo Gallery" },
-      { href: "/", label: "Video Gallery" },
-    ],
-  },
-];
-const policyMenu = [
-  {
-    title: "",
-    links: [
-      { href: "/", label: "Acts" },
-      { href: "/", label: "Policy" },
-      { href: "/", label: "Guidelines and Strategies" },
-      { href: "/", label: "Draft Acts, Rules and Policy" },
-    ],
-  },
-];
-const servicesMenu = [
-  {
-    title: "",
-    links: [
-      { href: "/", label: "Casual Leave Management" },
-      { href: "/", label: "Smart Dashboard" },
-      { href: "/", label: "Get Your Freelancer ID" },
-      { href: "/", label: "Fellowship & Innovation Fund Application" },
-      { href: "/", label: "e-Nothi" },
-      { href: "/", label: "Web mail" },
-      { href: "/", label: "Online Salary Submission" },
-      { href: "/", label: "e-Tendering(e-GP)" },
-      { href: "/", label: "Mygov" },
-      { href: "/", label: "GRP" },
-      { href: "/", label: "Project Monitoring System" },
-      { href: "/", label: "Online ACR" },
-      { href: "/", label: "Online Recruitment" },
-      { href: "/", label: "EMPORIA" },
-    ],
-  },
-];
-
-const projectMenu = [
-  {
-    title: "Project",
-    links: [
-      { href: "/", label: "On going Projects" },
-      { href: "/", label: "Procurement Plan" },
-      { href: "/", label: "Completed Projects" },
-    ],
-  },
-  {
-    title: "Programme",
-    links: [{ href: "/", label: "Completed Programme" }],
-  },
-];
-const contactAndCommentMenu = [
-  {
-    title: "Contact",
-    links: [{ href: "/", label: "Office Address" }],
-  },
-  {
-    title: "Comment",
-    links: [{ href: "/", label: "Your Question & Comment" }],
-  },
-];
-
 const Navbar = () => {
   return (
-    <div className="w-full h-[70px] bg-primary-foreground/10 text-black flex items-center justify-between px-[60px]">
+    <div className="w-full h-[70px] bg-primary-foreground/10 text-black flex items-center justify-between md:px-[70px] px-5">
       <p className="font-bold text-2xl">
         <span className="text-primary">ICT</span>{" "}
         <span className="text-primary-foreground">Division</span>
       </p>
       <div>
-        <ul className="flex items-center gap-x-3 md:hidden lg:flex">
+        <div className="lg:hidden block">
+          <Drawer direction="right">
+            <DrawerTrigger>
+              <IoMenu className="text-2xl" />{" "}
+            </DrawerTrigger>
+            <DrawerContent className="">
+              <DrawerClose className="flex justify-end m-2">
+                <AiOutlineCloseSquare className="text-3xl p-1" />
+              </DrawerClose>
+              <div className="flex flex-col w-[250px] gap-y-3 font-medium px-4 max-h-screen overflow-y-scroll">
+                {menuLinks.map((menu, menuIndex) => (
+                  <Accordion
+                    key={menuIndex}
+                    type="single"
+                    collapsible
+                    className="w-full"
+                  >
+                    <AccordionItem value={`item-${menuIndex}`} className="">
+                      <AccordionTrigger className="h-[40px] text-start">
+                        {menu.title}
+                      </AccordionTrigger>
+                      <AccordionContent>
+                        {menu.subMenus.map((subMenu, subMenuIndex) => (
+                          <div key={subMenuIndex} className="pl-4">
+                            {subMenu.title ? (
+                              <Accordion type="single" collapsible>
+                                <AccordionItem
+                                  value={`subItem-${subMenuIndex}`}
+                                >
+                                  <AccordionTrigger className="text-start">
+                                    {subMenu.title}
+                                  </AccordionTrigger>
+                                  <AccordionContent>
+                                    <ul>
+                                      {subMenu.links.map((link, linkIndex) => (
+                                        <li key={linkIndex}>
+                                          <Link
+                                            to={link.href}
+                                            className="block py-1"
+                                          >
+                                            {link.label}
+                                          </Link>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </AccordionContent>
+                                </AccordionItem>
+                              </Accordion>
+                            ) : (
+                              <ul>
+                                {subMenu.links.map((link, linkIndex) => (
+                                  <li key={linkIndex}>
+                                    <Link to={link.href} className="block py-1">
+                                      {link.label}
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
+                          </div>
+                        ))}
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                ))}
+              </div>
+            </DrawerContent>
+          </Drawer>
+        </div>
+        <ul className="items-center gap-x-3 hidden lg:flex">
           <li>
             <CustomMenu options={aboutUs} label="About us" />
           </li>

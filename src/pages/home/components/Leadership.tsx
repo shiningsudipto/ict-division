@@ -23,33 +23,33 @@ const Leadership = () => {
     },
   ];
   return (
-    <div className="p-[70px] bg-primary-foreground/20">
+    <div className="md:p-[70px] p-5 bg-primary-foreground/20">
       <div className="text-center mb-10">
         <h2 className="heading">Leadership Spotlight</h2>
         <h3 className="subHeading">Meet Our Honorable Adviser and Secretary</h3>
       </div>
-      <div className="flex lg:flex-row md:flex-col justify-center gap-5">
+      <div className="flex lg:flex-row flex-col justify-center gap-5">
         {leaders.map((item, idx) => {
           return (
             <div
               key={idx}
-              className="flex gap-x-5 w-full border rounded-md p-4 bg-slate-50"
+              className="flex md:flex-row flex-col gap-x-5 w-full border rounded-md p-4 bg-slate-50"
             >
-              <div className="space-y-2 flex-1">
+              <div className="space-y-2 flex-1 md:text-start text-center">
                 <img
                   src={item.img}
                   alt=""
-                  className="w-[250px] h-[290px] object-cover border rounded-md bg-primary-foreground"
+                  className="md:w-[250px] w-full md:h-[290px] object-cover border rounded-md bg-primary-foreground"
                 />
                 <p className="text-xl font-bold">{item.title}</p>
                 <p className="text-lg font-medium">{item.name}</p>
-                <div className="flex items-center gap-x-2 text-primary">
+                <div className="flex items-center md:justify-start justify-center gap-x-2 text-primary">
                   <RiFacebookCircleLine className="text-[24px] cursor-pointer hover:text-primary-foreground" />
                   <TiSocialTwitterCircular className="text-[26px] cursor-pointer hover:text-primary-foreground" />
                   <MdAlternateEmail className="text-[22px] cursor-pointer hover:text-primary-foreground" />
                 </div>
               </div>
-              <div className="w-[300px]">
+              <div className="w-[300px] md:mt-0 mt-4">
                 <p>
                   {item.about.slice(0, 550)}...{" "}
                   <span className="flex items-center text-primary font-medium">

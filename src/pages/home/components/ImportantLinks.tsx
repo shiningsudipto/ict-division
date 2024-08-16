@@ -39,7 +39,7 @@ const ImportantLinks = () => {
   };
   return (
     <div className="">
-      <div className="flex justify-between lg:flex-row md:flex-col md:gap-5 mb-[70px]">
+      <div className="flex justify-between lg:flex-row flex-col gap-5 md:mb-[70px]">
         <div className="relative border rounded-md p-8 bg-primary/5">
           <h3 className="text-2xl font-medium text-primary">Notice Board</h3>
           <div className="notices">
@@ -69,7 +69,7 @@ const ImportantLinks = () => {
           <img
             src={govtLogo}
             alt=""
-            className="w-[100px] absolute left-[-55px] top-[-55px] z-0"
+            className="md:w-[100px] w-[60px] absolute md:left-[-55px] md:top-[-55px] left-[-20px] top-[-20px] z-0"
           />
         </div>
         <div>
@@ -91,7 +91,7 @@ const ImportantLinks = () => {
                   placeholder="select category"
                   options={officeSubTypes}
                 />
-                <button className="h-[40px] w-[80px] rounded-md font-medium text-white bg-primary">
+                <button className="h-[40px] md:w-[80px] w-full rounded-md font-medium text-white bg-primary">
                   Go
                 </button>
               </Form>
@@ -99,7 +99,6 @@ const ImportantLinks = () => {
           </Formik>
         </div>
       </div>
-      {/* <Card /> */}
     </div>
   );
 };
