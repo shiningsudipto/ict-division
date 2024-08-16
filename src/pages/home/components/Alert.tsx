@@ -2,8 +2,8 @@ const Alert = () => {
   return (
     <div className="md:p-[70px] p-5">
       <div className="text-center mb-10">
-        <h2 className="heading">Crisis Preparedness Hub</h2>
-        <h3 className="subHeading">
+        <h2 className="heading text-secondary">Crisis Preparedness Hub</h2>
+        <h3 className="subHeading text-secondary-foreground">
           Learn How to Navigate National Emergencies
         </h3>
       </div>

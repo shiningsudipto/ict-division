@@ -25,8 +25,10 @@ const Leadership = () => {
   return (
     <div className="md:p-[70px] p-5 bg-primary-foreground/20">
       <div className="text-center mb-10">
-        <h2 className="heading">Leadership Spotlight</h2>
-        <h3 className="subHeading">Meet Our Honorable Adviser and Secretary</h3>
+        <h2 className="heading text-secondary">Leadership Spotlight</h2>
+        <h3 className="subHeading text-secondary-foreground">
+          Meet Our Honorable Adviser and Secretary
+        </h3>
       </div>
       <div className="flex lg:flex-row flex-col justify-center gap-5">
         {leaders.map((item, idx) => {

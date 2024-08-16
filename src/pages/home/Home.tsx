@@ -34,9 +34,9 @@ const Home = () => {
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
   return (
-    <div className="relative">
+    <div className="text-secondary">
       <Banner />
-      <div className="flex lg:flex-row flex-col md:p-[70px] p-5 justify-between gap-5">
+      <div className="flex lg:flex-row flex-col md:p-[70px] p-5 justify-between gap-5 ">
         <div>
           <ImportantLinks />
           <div className="hidden lg:block">

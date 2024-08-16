@@ -11,8 +11,10 @@ const Location = () => {
   return (
     <div className="md:p-[70px] p-5">
       <div className="text-center mb-10">
-        <h2 className="heading">Location & Feedback</h2>
-        <h3 className="subHeading">Hotlines for help you</h3>
+        <h2 className="heading text-secondary">Location & Feedback</h2>
+        <h3 className="subHeading text-secondary-foreground">
+          Hotlines for help you
+        </h3>
       </div>
       <div className="flex lg:flex-row flex-col lg:gap-x-[70px] gap-5">
         <div className="lg:w-[50%]">
@@ -27,7 +29,7 @@ const Location = () => {
           />
         </div>
         <div className="lg:w-[50%]">
-          <h3 className="text-2xl font-medium md:text-start text-center">
+          <h3 className="text-2xl font-medium md:text-start text-center font-poppins">
             Feedback
           </h3>
           <Formik

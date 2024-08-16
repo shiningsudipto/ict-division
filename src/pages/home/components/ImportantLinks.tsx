@@ -52,7 +52,9 @@ const ImportantLinks = () => {
     <div className="">
       <div className="flex justify-between lg:flex-row flex-col gap-5 md:mb-[70px]">
         <div className="relative border rounded-md p-8 bg-primary/5">
-          <h3 className="text-2xl font-medium text-primary">Notice Board</h3>
+          <h3 className="text-2xl font-medium text-primary font-poppins">
+            Notice Board
+          </h3>
           <div className="notices">
             {notice?.map((item, index) => {
               const maxLength = item?.length;
@@ -84,7 +86,9 @@ const ImportantLinks = () => {
           />
         </div>
         <div>
-          <h3 className="text-2xl font-medium">Bangladesh National Portal</h3>
+          <h3 className="text-2xl font-medium font-poppins text-secondary">
+            Bangladesh National Portal
+          </h3>
           <Formik onSubmit={handleSubmit} initialValues={initialValues}>
             {({ setFieldValue }) => (
               <Form className="space-y-5 mt-5">

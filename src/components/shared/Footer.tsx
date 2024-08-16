@@ -48,7 +48,7 @@ const Footer = () => {
       <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-x-[100px] gap-5">
         <div className="md:block flex flex-col justify-center items-center">
           <h4 className="font-semibold text-lg mb-4">Important links</h4>
-          <div className="space-y-2 md:text-start text-center">
+          <div className="space-y-2 md:text-start text-center font-lato">
             {footerLinks.map((item, index) => {
               return (
                 <div key={index}>
@@ -64,7 +64,7 @@ const Footer = () => {
           <h4 className="font-semibold text-lg mb-4">
             Planning and Implementation
           </h4>
-          <div className="space-y-2 md:text-start text-center">
+          <div className="space-y-2 md:text-start text-center font-lato">
             {planningAndImplementation.map((item, index) => {
               return (
                 <div key={index}>
@@ -78,7 +78,7 @@ const Footer = () => {
         </div>
         <div className="md:block flex flex-col justify-center items-center">
           <h4 className="font-semibold text-lg mb-4">Technical Support</h4>
-          <div className="space-x-2 flex items-baseline">
+          <div className="space-x-2 flex items-baseline font-lato">
             {techSupports.map((item, index) => {
               return (
                 <div key={index}>

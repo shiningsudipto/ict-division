@@ -4,8 +4,8 @@ const Anthem = () => {
   return (
     <div className="anthem flex justify-center flex-col items-center">
       <div className="text-center mb-10 text-white">
-        <h2 className="heading">National Anthem</h2>
-        <h3 className="subHeading">
+        <h2 className="heading text-white">National Anthem</h2>
+        <h3 className="subHeading text-white">
           Listen to the sacred anthem that unites our nation.
         </h3>
       </div>

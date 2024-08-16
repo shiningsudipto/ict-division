@@ -1,10 +1,10 @@
 const Banner = () => {
   return (
     <div className="banner p-5 md:h-[400px] h-[300px] flex items-center justify-center flex-col">
-      <h1 className="md:text-[64px] text-4xl text-white font-bold mb-4">
+      <h1 className="md:text-[64px] text-4xl text-white font-bold mb-4 font-poppins">
         ICT Division
       </h1>
-      <h2 className="text-2xl text-center font-semibold text-white">
+      <h2 className="text-2xl text-center font-semibold text-white font-lato">
         Government of the People's Republic of Bangladesh
       </h2>
       <div className="mt-5">

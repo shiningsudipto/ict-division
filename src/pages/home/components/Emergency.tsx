@@ -60,8 +60,10 @@ const Emergency = () => {
   return (
     <div className="w-full p-[70px] bg-primary/5">
       <div className="text-center mb-10">
-        <h2 className="heading">Emergency</h2>
-        <h3 className="subHeading">Hotlines for help you</h3>
+        <h2 className="heading text-secondary">Emergency</h2>
+        <h3 className="subHeading text-secondary-foreground">
+          Hotlines for help you
+        </h3>
       </div>
       <Carousel
         plugins={[autoplayPlugin.current]}

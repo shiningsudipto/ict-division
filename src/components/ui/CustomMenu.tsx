@@ -20,7 +20,7 @@ const CustomMenu: React.FC<CustomMenuProps> = ({ options, label }) => {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="bg-transparent">
+          <NavigationMenuTrigger className="bg-transparent font-poppins">
             {label}
           </NavigationMenuTrigger>
           <NavigationMenuContent className="p-2">

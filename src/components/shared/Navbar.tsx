@@ -218,8 +218,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-[70px] bg-primary-foreground/10 text-black flex items-center justify-between md:px-[70px] px-5">
-        <p className="font-bold text-2xl">
+      <div className="w-full h-[70px] bg-primary-foreground/10 text-secondary flex items-center justify-between md:px-[70px] px-5">
+        <p className="font-bold text-2xl font-poppins">
           <span className="text-primary">ICT</span>{" "}
           <span className="text-primary-foreground">Division</span>
         </p>
@@ -233,7 +233,7 @@ const Navbar = () => {
                 <DrawerClose className="flex justify-end m-2">
                   <AiOutlineCloseSquare className="text-3xl p-1" />
                 </DrawerClose>
-                <div className="flex flex-col w-[250px] gap-y-3 font-medium px-4 max-h-screen overflow-y-scroll">
+                <div className="flex flex-col w-[250px] gap-y-3 font-medium px-4 max-h-screen overflow-y-scroll font-poppins">
                   {menuLinks.map((menu, menuIndex) => (
                     <Accordion
                       key={menuIndex}
@@ -298,7 +298,7 @@ const Navbar = () => {
               </DrawerContent>
             </Drawer>
           </div>
-          <ul className="items-center gap-x-3 hidden lg:flex">
+          <ul className="items-center gap-x-3 hidden lg:flex font-poppins">
             <li>
               <CustomMenu options={aboutUs} label="About us" />
             </li>
