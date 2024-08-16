@@ -11,7 +11,7 @@ const Banner = () => {
         <input
           type="text"
           placeholder="Query..."
-          className="h-[40px] md:w-[280px] px-4 py-1"
+          className="h-[40px] md:w-[280px] px-4 py-1 focus-visible:outline-primary-foreground "
         />
         <button
           type="submit"
