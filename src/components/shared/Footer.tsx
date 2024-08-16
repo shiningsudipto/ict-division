@@ -45,7 +45,7 @@ const getCurrentDateTime = (): string => {
 const Footer = () => {
   return (
     <div className="footer p-[70px] text-secondary bg-primary-foreground/10">
-      <div className="flex justify-between gap-x-[70px]">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-x-[100px] md:gap-5">
         <div>
           <h4 className="font-semibold text-lg mb-4">Important links</h4>
           <div className="space-y-2">
@@ -94,12 +94,14 @@ const Footer = () => {
             })}
           </div>
         </div>
-        <div>
-          <h4 className="font-semibold text-lg mb-4">Socials</h4>
-          <div className="flex items-center gap-x-2 text-primary-foreground">
-            <RiFacebookCircleLine className="text-[36px] cursor-pointer hover:text-primary" />{" "}
-            <TiSocialTwitterCircular className="text-[40px] cursor-pointer hover:text-primary" />{" "}
-            <FaRegCirclePlay className="text-[30px] cursor-pointer hover:text-primary" />
+        <div className="flex justify-end">
+          <div>
+            <h4 className="font-semibold text-lg mb-4">Socials</h4>
+            <div className="flex items-center gap-x-2 text-primary-foreground">
+              <RiFacebookCircleLine className="text-[36px] cursor-pointer hover:text-primary" />{" "}
+              <TiSocialTwitterCircular className="text-[40px] cursor-pointer hover:text-primary" />{" "}
+              <FaRegCirclePlay className="text-[30px] cursor-pointer hover:text-primary" />
+            </div>
           </div>
         </div>
       </div>

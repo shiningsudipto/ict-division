@@ -124,7 +124,7 @@ const Navbar = () => {
         <span className="text-primary-foreground">Division</span>
       </p>
       <div>
-        <ul className="flex items-center gap-x-3">
+        <ul className="flex items-center gap-x-3 md:hidden lg:flex">
           <li>
             <CustomMenu options={aboutUs} label="About us" />
           </li>

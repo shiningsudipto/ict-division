@@ -39,7 +39,7 @@ const ImportantLinks = () => {
   };
   return (
     <div className="">
-      <div className="flex justify-between mb-[70px]">
+      <div className="flex justify-between lg:flex-row md:flex-col md:gap-5 mb-[70px]">
         <div className="relative border rounded-md p-8 bg-primary/5">
           <h3 className="text-2xl font-medium text-primary">Notice Board</h3>
           <div className="notices">
